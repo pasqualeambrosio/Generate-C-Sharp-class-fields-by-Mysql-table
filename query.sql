@@ -3,7 +3,7 @@
 set @table_schema = 'db_test';
 set @table_name = 'customers';
 
-select concat('public class ', @table_name, ' {' ) as res 
+select concat('public class ', CONCAT(UCASE(LEFT(@table_name, 1)), LCASE(SUBSTRING(@table_name, 2))), ' {' ) as res 
 union
 select concat('    ', P1, P2, CONCAT(UCASE(LEFT(P3, 1)), SUBSTRING(P3, 2)), P4, P5) res from  (
   select 'public ' P1, 
@@ -28,7 +28,7 @@ select '}' as res
 
 /*
 Result:
-public class customers {
+public class Customers {
     public int Id { get; set; } // PK
     public string Name { get; set; }
     public string Surname { get; set; }
