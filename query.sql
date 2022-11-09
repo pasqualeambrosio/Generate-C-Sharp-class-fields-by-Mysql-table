@@ -1,3 +1,5 @@
+-- Edit the follow two variables and remember to rename the c# class with singular word
+
 set @table_schema = 'db_test';
 set @table_name = 'customers';
 
