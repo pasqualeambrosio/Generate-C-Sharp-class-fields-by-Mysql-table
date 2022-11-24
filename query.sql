@@ -12,7 +12,7 @@ select concat('    ', P1, P2, CONCAT(UCASE(LEFT(P3, 1)), SUBSTRING(P3, 2)), P4, 
     when data_type = 'bigint' then 'int '  
     when data_type = 'varchar' then 'string '
     when data_type = 'datetime' then 'DateTime? '
-    else data_type
+    else concat(data_type, ' ')
   end as P2,
   replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(column_Name,'_a','A'),'_b','B'),'_c','C'),'_d','D'),'_e','E'),'_f','F'),'_g','G'),'_h','H'),'_i','I'),'_l','L'),'_m','M'),'_n','N'),'_o','O'),'_p','P'),'_q','Q'),'_r','R'),'_s','S'),'_t','T'),'_u','U'),'_v','V'),'_z','Z'),'_x','X'),'_y','Y'),'_k','K'),'_j','J') as P3,
   ' { get; set; }' as P4,
